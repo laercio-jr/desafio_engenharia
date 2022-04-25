@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+body {
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+.background-img {
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#caf1ff, #00bbff00);
+}
+.img{
+    width: 50%;
+    margin-top: -108px;
+}
+
+
+@media (max-width: 710px)
+{
+    .img{
+        display: none;
+    }
+}
+
+.main{
+    height: 70vh;
+}
+
+.titulo {
+    font-size:1.5rem!important;
+}
+
+.tabela{
+    max-width: 70%;
+}
+.tabela2{
+    max-width: 15%;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/laerciobispo_desafio_engenharia/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body class="background-img">    
+    <nav class="navbar container-fluid px-5 d-flex flex-row justify-content-between">
+        <a class="navbar-brand" href="https://www.loggi.com/">
+            <img src="https://logodownload.org/wp-content/uploads/2019/07/loggi-logo.png" height="40px">
+        </a>
+        <a target="_blank" href="https://github.com/laercio-jr"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Emblem.png" height="70px" alt=""></a>
+       
+    </nav>
+    
+    <div class="px-5 pt-4 container-fluid d-flex flex-row justify-content-between">
+        <div>
+            <p class="display-5 titulo"> <b>Dados:</b> </p>
+            <p><b>Nome:</b> Laércio Bispo de Almeida Júnior</p>
+            <p><b>Universidade:</b> Universidade Federal da Bahia</p>
+            <p><b>Curso:</b> Bacharelado Interdisciplinar em Ciência e Tecnologia</p>
+            <p><b>Semestre atual:</b> 5º</p>
+        </div>
+        <img src="https://wp-admin.loggi.com/wp-content/uploads/2021/12/a_solucao_que_voce_precisa_mobile.png" class="img" alt="">
+    </div>
+
+    <h1 class="text-center">O leitor de código de barras da Loggi</h1>
+
+    <div class="container main">        
+
+        <hr>
+
+        <h4 class="display-5 titulo">1 - Região de destino de cada pacote + totalização/soma por região:</h4>
+        
+        <div class="d-flex flex-row">
+            <div class="px-2">
+                <ul id="q1" class="lista">
+                </ul>
+            </div>
+            <div class="px-2">
+                Totalização por região:
+                <ul id="q1-pt2" class="lista">
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+        
+        <h4 class="display-5 titulo">2 - Pacotes com códigos válidos/inválidos:</h4>
+        <div class="d-flex flex-row">
+            <div class="px-3">
+                Válidos:
+                <ul id="q2validos" class="lista">
+                </ul>
+            </div>
+            <div class="px-3">
+                Inválidos:
+                <ul id="q2invalidos" class="lista">
+                </ul>
+            </div>
+        </div>        
+
+        <hr>
+        
+        <h4 class="display-5 titulo">3 - Pacotes com Brinquedos e destino Sul ao mesmo tempo:</h4>
+        <ul id="q3" class="lista">
+        </ul>
+
+        <hr>
+        
+        <h4 class="display-5 titulo">4 - Códigos validos agrupados por destino:</h4>
+        
+        <div class="d-flex flex-row">
+            <div class="px-2">
+                Sudeste:
+                <ul id="q4sul" class="lista">
+                </ul>
+            </div>
+            <div class="px-2">
+                Sul:
+                <ul id="q4sudeste" class="lista">
+                </ul>
+            </div>
+            <div class="px-2">
+                Centro-Oeste:
+                <ul id="q4centro" class="lista">
+                </ul>
+            </div>
+            <div class="px-2">
+                Nordeste
+                <ul id="q4nordeste" class="lista">
+                </ul>
+            </div>
+            <div class="px-2">
+                Norte
+                <ul id="q4norte" class="lista">
+                </ul>
+            </div>      
+        </div>
+
+        <hr>
+        
+        <h4 class="display-5 titulo">5 - Lista de vendedores e seus pacotes (somente com códigos válidos):</h4>
+        <div class="d-flex flex-row" id="q5">
+            <!--
+            <div class="px-2">
+                Sudeste:
+                <ul id="q5vendedor" class="lista">
+                </ul>
+            </div>
+            -->
+        </div>
+
+        <hr>
+        
+        <h4 class="display-5 titulo ">6 - Lista de pacotes com códigos válidos, seu destino e o tipo de produto:</h4>
+        <div class="tabela ">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Códigos</th>
+                        <th scope="col">Destino</th>
+                        <th scope="col">Produto</th>
+                    </tr>
+                </thead>
+                <tbody id="q6"></tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <h4 class="display-5 titulo">7 - Lista de pacotes que devem ser despachados no mesmo caminhão, indo para o Norte e passando pelo Centro-Oeste:</h4>
+        <ul id="q7" class="lista">
+        </ul>
+
+        <hr>
+
+        <h4 class="display-5 titulo">8/9 - Fila de pacotes serão descarregados, em ordem, partindo do Norte e indo para o Centro Oeste primeiro:</h4>
+        <div class="tabela ">
+              <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Pacote</th>
+                        <th scope="col">Origem</th>
+                        <th scope="col">Destino</th>
+                    </tr>
+                </thead>
+                <tbody id="q8"></tbody>
+            </table>
+        </div>
+
+        <hr>
+        
+        <h4 class="display-5 titulo">10 - Códigos Inválidos:</h4>
+        <ul id="q10" class="lista">
+        </ul>
+    </div>    
+    
+    <script src="/laerciobispo_desafio_engenharia/script.js"></script>
+</body>
+</html>
