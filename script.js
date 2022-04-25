@@ -1,20 +1,4 @@
-/*
-
-1 - OK
-
- */
-
-
-/*
-O código de barras será inválido...
-    1 - 
-    2 - 
-    3 - Se o codProduto for diferente de Jóias (001), Livros (111), Eletrônicos (333), Bebidas (555) ou Brinquedos (888);
-    4 - Se o codProduto for Jóia (001) e tiver codDestino para Centro-Oeste (201 ~ 299) ao mesmo tempo.
-
-*/
-
-
+//Base de códigos
 const codigos = [
     "288355555123888",
     "335333555584333",
@@ -38,10 +22,7 @@ const codigos = [
     "034311555874001"
 ];
 
-
-
-
-
+//Funções reutilizáveis
 function codOrigem(codigo){
     return codigo.substring(0,3); 
 }
@@ -221,13 +202,6 @@ function getVendedorEspecifico(pacotes,codVendedorProcurado){
 }
 
 /*
-console.log(codOrigem(codigos[0]))
-
-sud = codDestino(codigos[0])
-
-console.log(getNomeRegiao(sud))
-
-/*
 ---Testes de funções + expected---
 
 -TestaCodOrigem:
@@ -257,9 +231,8 @@ console.log(getNomeRegiao(sud))
 
 */
 
-// FUNÇÃO PRINCIPAL
-
-// Q1 - Identificação de região de destino (cada pacote) e totalização dos pacotes por região.
+// --RESOLUÇÃO DOS ITENS--
+// Q1
 const q1 = document.getElementById('q1');
 const q1pt2 = document.getElementById('q1-pt2');
 codigos.forEach(
@@ -341,7 +314,7 @@ if(pacotesComBrinquedosOrigemSul.length != 0){
     q3.innerHTML += "Não existem pacotes com Brinquedos e origem no Sul ao mesmo tempo";
 }
 
-    /* TESTE Q2
+    /* TESTE Q3
     console.log("Q3 - Pacotes com Brinquedos e destino Sul ao mesmo tempo");
     (pacotesComBrinquedosOrigemSul.length != 0) ? console.log(pacotesComBrinquedosOrigemSul) : console.log("Não existem pacotes com Brinquedos e origem no Sul ao mesmo tempo")
 
@@ -479,7 +452,7 @@ const pacotesComDestinoCentroOeste = getDestinoEspecifico(codigosValidos,"Centro
 pacotesComDestinoNorte.forEach(element => q7.innerHTML += `<li> ${element} </li>`)
 pacotesComDestinoCentroOeste.forEach(element => q7.innerHTML += `<li> ${element} </li>`)
 
-// Q8 / Q9
+// Q8/Q9
 // Não sei se o item quis dizer isso, mas interpretei como uma ordem de 
 // carga (origem) no Norte , para descarregar (destino) no Centro-Oeste primeiro, depois o restante das regiões
 // Basicamente, essa parte do código irá mover as rotas com destino desejado para primeiro na fila, no caso o Centro-Oeste
@@ -488,7 +461,6 @@ let pacotesComOrigemNorte = getOrigemEspecifica(codigosValidos,"Norte");
 let pacotesComOrigemNorteEmFila = [];
 
 q8 = document.getElementById('q8');
-
 
 pacotesComOrigemNorte.forEach( //Passando os itens do Centro-Oeste para o inicio da fila
     (element,index) => {
@@ -507,25 +479,25 @@ pacotesComOrigemNorteEmFila.forEach(
     }
 )
 
-/* TESTE Q8/Q9
-console.log("Q8/Q9 - Fila de pacotes serão descarregados, em ordem, partindo do Norte e indo para o Centro Oeste primeiro");
-pacotesComOrigemNorteEmFila.forEach(
-    (element) => {
-        console.log(
-            `Pacote ${element}: ${getNomeRegiao(codOrigem(element))} -> ${getNomeRegiao(codDestino(element))}`            
-        )
-    }
-)
+    /* TESTE Q8/Q9
+    console.log("Q8/Q9 - Fila de pacotes serão descarregados, em ordem, partindo do Norte e indo para o Centro Oeste primeiro");
+    pacotesComOrigemNorteEmFila.forEach(
+        (element) => {
+            console.log(
+                `Pacote ${element}: ${getNomeRegiao(codOrigem(element))} -> ${getNomeRegiao(codDestino(element))}`            
+            )
+        }
+    )
 
 
-console.log("");
-*/
+    console.log("");
+    */
 
 // Q10
 const q10 = document.getElementById('q10');
 codigosInvalidos.forEach((element) => {q10.innerHTML += "<li>" + element + "</li>"});
 
-/* TESTE 
-console.log("Q10 - Códigos inválidos:");
-codigosInvalidos.forEach(element => console.log(element));
-*/
+    /* TESTE Q10
+    console.log("Q10 - Códigos inválidos:");
+    codigosInvalidos.forEach(element => console.log(element));
+    */
