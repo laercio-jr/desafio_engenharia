@@ -4,7 +4,7 @@ Código de resolução do desafio de engenharia da Loggi.
 Consiste em uma aplicação para tratar código de barras de pacotes.
 
 ### ATENÇÃO!!! 
-Como fiz em HTML, CSS e Javascript, pode visualizar o resultado em forma de site, através desse link:
+Como fiz em HTML5, CSS3 e Javascript, pode visualizar o resultado em forma de site, através desse link:
 https://laercio-jr.github.io/desafio_engenharia/
 
 ## **Tecnologias utilizadas**  
