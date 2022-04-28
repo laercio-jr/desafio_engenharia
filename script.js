@@ -462,7 +462,16 @@ let pacotesComOrigemNorteEmFila = [];
 
 q8 = document.getElementById('q8');
 
-pacotesComOrigemNorte.forEach( //Passando os itens do Centro-Oeste para o inicio da fila
+pacotesComOrigemNorte.forEach( //Passando os itens do Norte para o inicio da fila
+    (element,index) => {
+        if(getNomeRegiao(codDestino(element)) == "Norte"){
+            pacotesComOrigemNorteEmFila.push(element)
+            pacotesComOrigemNorte.splice(index,1)
+        }
+    }
+)
+
+pacotesComOrigemNorte.forEach( //Passando os itens do Centro-Oeste para o inicio da fila, após os itens do norte
     (element,index) => {
         if(getNomeRegiao(codDestino(element)) == "Centro-Oeste"){
             pacotesComOrigemNorteEmFila.push(element)
